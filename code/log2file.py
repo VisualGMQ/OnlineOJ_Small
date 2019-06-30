@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 def Log(msg):
-    with open('./log.txt', 'a+') as file:
+    with open('./log.txt', 'a+',encoding='utf-8') as file:
         file.write('%s: %s\n' %(datetime.now(), msg))
 
 

@@ -13,7 +13,7 @@ app.config['SECRET_KEY'] = 'this is secret key'
 app.config['DEBUG'] = True
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
 
-dbmanager = DBManager('onlineOJ', 'ComPro32API', 'localhost', 'root')
+dbmanager = DBManager('onlineOJ', 'root', 'localhost', 'root')
 
 
 @app.route('/login', methods=["GET", "POST"])
