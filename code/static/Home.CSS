@@ -183,3 +183,53 @@ textarea {
     width: 100%;
     height: 100%;
 }
+
+.slideShow{
+    width: 848px;
+    height: 600px;     /*其实就是图片的高度*/
+    border: 1px #eeeeee solid;
+    border-radius: 4px;
+    box-shadow: 0 0 10px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;    /*此处需要将溢出框架的图片部分隐藏*/
+}
+
+.slideShow ul{
+    width: 6000px;
+    position: relative;    /*此处需注意relative : 对象不可层叠，但将依据left，right，top，bottom等属性在正常文档流中偏移位置，如果没有这个属性，图片将不可左右移动*/
+    list-style: none;
+    margin: 0px;
+}
+.slideShow ul li{
+    float: left;     /*让五张图片左浮动，形成并排的横着布局，方便点击按钮时的左移动*/
+    width: 848px;
+}
+
+.slideShow ul li a img{
+    width: 848px;
+    height: 600px;
+}
+
+.slideShow .showNav{     /*用绝对定位给数字按钮进行布局*/
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    text-align:center;
+    font-size: 12px;    
+    line-height: 20px;
+}
+.slideShow .showNav span{
+    cursor: pointer;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #ff5a28;
+    margin-left: 2px;
+    color: #fff;
+}
+.slideShow .showNav .active{
+    background: #b63e1a;
+}

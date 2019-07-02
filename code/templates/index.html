@@ -12,16 +12,6 @@
         <header>
             <nav><!--主导航功能-->
                 <ul><!--无序列表-->
-<!--
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="QuestionBank.html">题库</a></li>
-                    <li><a href="Competition.html">比赛</a></li>
-                    <li><a href="Release.html">我要发布</a></li>
-                    <div>
-                        <li><a href="login.html">登录/注册</a></li>
-                    </div>
-                    -->
-
                     <li><a href="{{ url_for('homepage') }}">首页</a></li>
                     <li><a href="{{ url_for('questions') }}">题库</a></li>
                     <li><a href="{{ url_for('competition') }}">比赛</a></li>
@@ -38,14 +28,32 @@
             </nav>
         </header>
 
+        <script src="../static/jquery-3.4.1.js"></script>
+        <script src="../static/layer.js"></script>
+       
     <section class="feature">
-            <figure>
-                <h1>近期推送：</h1>
-                <img src=" {{ url_for('static', filename='./img/dajitui.jpg') }}" alt="net work wrong.">
-                <figcaption>
-                    变成大鸡腿并不是你放弃梦想的理由，只要还能动，便要继续交替双腿前进。
-                </figcaption>
-            </figure>
+            <!-- 左侧轮播图 -->
+            <div class="slideShow">
+                <!--图片布局开始-->
+                <ul class="ulCla">
+                    <li><a href="#"><img src="{{ url_for('static', filename='./img/1.png') }}" /></a></li>
+                    <li><a href="#"><img src="{{ url_for('static', filename='./img/2.png') }}" /></a></li>
+                    <li><a href="#"><img src="{{ url_for('static', filename='./img/3.png') }}" /></a></li>
+                    <li><a href="#"><img src="{{ url_for('static', filename='./img/4.png') }}" /></a></li>
+                    <li><a href="#"><img src="{{ url_for('static', filename='./img/5.png') }}" /></a></li>
+                </ul>
+                <!--图片布局结束-->
+                
+                <!--按钮布局开始-->
+                <div class="showNav">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
+                <!--按钮布局结束-->
+            </div>
     </section>
 
     <footer>
